@@ -1,0 +1,3 @@
+How to install?
+
+Copy the tutorials folder to this path: mysql/data/

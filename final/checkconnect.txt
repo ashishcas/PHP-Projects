@@ -1,0 +1,28 @@
+<?php
+
+require "insert.php";
+ 
+ $conn =  mysqli_connect("localhost:3306","root","","EXPERTS");
+ 
+ $first = $_POST["user_name"];
+ $last = $_POST["lname"];
+ $mail =  $_POST["email"];
+ $phone = $_POST["mobile"];
+ $pass = $_POST["user_pass"]; 
+
+
+ $sql = "INSERT INTO  CONSUMERS (firstname,lastname,email,phone,password) 
+             VALUES('$first','$last','$mail','$phone','$pass');";
+ 
+ 
+ if(mysqli_query($conn,$sql))
+ {
+	 echo "DATA INSERTED";
+ }
+ else
+ {
+	 echo "DATA NOT INSERTED";
+ }
+ 
+ 
+ ?>
